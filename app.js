@@ -1,9 +1,8 @@
-const http = require('http');
+const express = require("express");
+const app = express(); // instanciates a express function(which is a built-in class) for using
 
 const port = 25565;
 
-http.createServer(function(req, res){
-    res.end("Hello World!");
-}).listen(port);
-
-console.log("Server online on port " + port);
+app.listen(port, function() {
+  console.log("Server online on port " + port);
+}); // must be the last command
