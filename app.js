@@ -4,7 +4,7 @@ const app = express(); // instanciates a express function(which is a built-in cl
 const port = 25565;
 
 app.get("/", function(req, res){ //home route
-    res.send("Hello World!")
+    res.send("<h1> Hello World! </h1>") //including HTML inside 
 });
 
 app.listen(port, function() {
