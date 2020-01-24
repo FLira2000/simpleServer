@@ -4,11 +4,11 @@ const app = express(); // instanciates a express function(which is a built-in cl
 const PORT = 25565;
 
 app.get("/", function(req, res){ //home route
-    res.send("<h1> Hello World! </h1>") //including HTML inside 
+    res.sendFile(__dirname + "/html/home/index.html") //including HTML inside 
 });
 
 app.get("/about", function(req, res){ //about route
-  res.send("<p> Simple Server project created by Fabio L. </p>" + "<p> Any suggestions, send an email.</p>");
+  res.sendFile(__dirname + "/html/about/index.html");
 })
 
 app.listen(PORT, function() {
